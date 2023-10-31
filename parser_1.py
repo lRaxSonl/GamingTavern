@@ -9,16 +9,16 @@ def get_data():
     soup = BS(req.text, 'lxml')
     names_arr = []
     hrefs_arr = []
-    object_name = soup.find_all('div', class_='_card_11mk8_1')   #Находит общий объект в котором есть названия
+    imgs_arr = []
+    object_name = soup.find_all('div', class_='_content_11mk8_159')   #Находит общий объект в котором есть названия
     for object_name_all in object_name:#Цикл фор
         all_names = object_name_all.find('a', class_='_title_11mk8_60').text #Берём название
         all_href = object_name_all.find('a').get('href')
         href_output = 'https://stopgame.ru' + all_href
+        
         names = f"{str(all_names)}\n"
-        hrefs = f"{str(href_output)}\n"                           #Записываем в него названия
-        #print(names.strip())
-        #print (hrefs.strip())
+        hrefs = f"{str(href_output)}\n" #Записываем в него названия
+
         names_arr.append(names.strip())
         hrefs_arr.append(hrefs.strip())
-        
-        return names_arr, hrefs_arr
+    return names_arr, hrefs_arr

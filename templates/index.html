@@ -12,34 +12,50 @@
 
 </head>
 
-<body onload="brython();">
-    <script type="text/python", src="static/script.py"></script>
+<body>
     <main class="main">
         <header class="header">
             <div class="logo">
                 <header class="logo_text">
                     <h1><a href="/">GamingTavern</a></h1>
-                    <h2>GamingTavern - наша страсть!</h2>
+                    <h2>Видеоигры - наша страсть!</h2>
                 </header>
             </div>
 
             <nav class="menubar">
 
                 <ul class="menu">
-                    <li class="selected"><a href="/">Главная</a></li>
-                    <li><a href="/films">фильмы</a></li>
-                    <li><a href="#">Сериалы</a></li>
-                    <li><a href="/rating">Рейтинг фильмов</a></li>
-                    <li><a href="/contact">Контакты</a></li>
-                    <li><a href="/home-est">EST</a></li>
+                    <li class="selected"><b><a href="/">Главная</a></b></li>
+                    <li><b><a href="/films">фильмы</a></b></li>
+                    <li><b><a href="#">Сериалы</a></b></li>
+                    <li><b><a href="/rating">Рейтинг фильмов</a></b></li>
+                    <li><b><a href="/contact">Контакты</a></b></li>
                 </ul>
             </nav>
         </header>
 
         <div class="site_content">
 
+            <div class="p_article">
+                <h1><b>Игровые новости</b></h1>
+                <ul>
+                    {% for name, href in data %}
+                        <li>
+                            <a href="{{ href }}">{{ name }}</a>
+                            <hr>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
             <div class="sidebar_container">
-                
+                <h1><b>Все обсуждают</b></h1>
+                <article class="all_about">
+                    <img class="all_about_img" src='static/assets/img/team_spirit.png'>
+                    <a href="https://stopgame.ru/newsdata/60453/team_spirit_stala_dvukratnym_chempionom_the_international">
+                        Team Spirit стала двукратным чемпионом The International
+                    </a>
+                </article>
             </div>
         </div>
     </main>

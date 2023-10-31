@@ -1,11 +1,13 @@
 from flask import Flask, render_template, url_for
+from parser_1 import get_data
 
 app = Flask(__name__)
 
 @app.route('/')
 @app.route('/home')
 def main_page():
-    return render_template('index.html')
+    names, hrefs = get_data()
+    return render_template('index.html', data=zip(names, hrefs))
 
 @app.route('/films')
 def films_page():
@@ -22,10 +24,6 @@ def contacts_page():
 @app.route('/show')
 def show_page():
     return render_template('show.html')
-
-@app.route('/home-est')
-def show_est_index():
-    return render_template('index_est.html')
 
 
 if __name__ == "__main__":
