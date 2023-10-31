@@ -6,11 +6,14 @@
     <meta name="description" content="GamingTavern - это портал видоигр">
     <meta name="keywords" content="фильмы, фильмы онлайн, hd">
     <title>Главная страница</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.12.0/brython.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.12.0/brython_stdlib.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
 </head>
 
-<body>
+<body onload="brython();">
+    <script type="text/python", src="static/script.py"></script>
     <main class="main">
         <header class="header">
             <div class="logo">
@@ -36,7 +39,7 @@
         <div class="site_content">
 
             <div class="sidebar_container">
-                <p>dfgdfg</p>
+                
             </div>
         </div>
     </main>
