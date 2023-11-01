@@ -25,8 +25,8 @@
             <nav class="menubar">
 
                 <ul class="menu">
-                    <li class="selected"><b><a href="/">Главная</a></b></li>
-                    <li><b><a href="/about">Обсуждения</a></b></li>
+                    <li><b><a href="/">Главная</a></b></li>
+                    <li class="selected"><b><a href="/about">Обсуждения</a></b></li>
                     <li><b><a href="#">Игры</a></b></li>
                     <li><b><a href="/contact">Контакты</a></b></li>
                 </ul>
@@ -34,18 +34,16 @@
         </header>
 
         <div class="site_content">
-
-            <div class="p_article">
-                <h1><b>Игровые новости</b></h1>
-                <ul>
-                    {% for name, href in data %}
-                        <li>
-                            <a href="{{ href }}">{{ name }}</a>
-                            <hr>
-                        </li>
-                    {% endfor %}
-                </ul>
+            <div class="sidebar_container">
+                <h1><b>Все обсуждают</b></h1>
+                <article class="all_about">
+                    <img class="all_about_img" src='static/assets/img/team_spirit.png'>
+                    <a href="https://stopgame.ru/newsdata/60453/team_spirit_stala_dvukratnym_chempionom_the_international">
+                        Team Spirit стала двукратным чемпионом The International
+                    </a>
+                </article>
             </div>
+        </div>
     </main>
 </body>
 

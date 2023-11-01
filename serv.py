@@ -9,21 +9,17 @@ def main_page():
     names, hrefs = get_data()
     return render_template('index.html', data=zip(names, hrefs))
 
-@app.route('/films')
-def films_page():
-    return render_template('films.html')
+@app.route('/about')
+def about_page():
+    return render_template('about.html')
 
-@app.route('/rating')
-def rating_page():
+@app.route('/games')
+def games_page():
     return render_template('rating.html')
 
 @app.route('/contact')
 def contacts_page():
     return render_template('contact.html')
-
-@app.route('/show')
-def show_page():
-    return render_template('show.html')
 
 
 if __name__ == "__main__":
