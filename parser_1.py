@@ -1,12 +1,6 @@
-import requests
-from bs4 import BeautifulSoup as BS
 
+def get_data_index(soup):
 
-def get_data():
-    url = f'https://stopgame.ru/news/all/p1'  #Меняем страницы
-    req = requests.get(url)
-
-    soup = BS(req.text, 'lxml')
     names_arr = []
     hrefs_arr = []
     object_name = soup.find_all('div', class_='_content_11mk8_159')   #Находит общий объект в котором есть названия
@@ -22,3 +16,23 @@ def get_data():
         hrefs_arr.append(hrefs.strip())
         
     return names_arr, hrefs_arr
+
+
+def get_data_about(soup):
+    
+    article_names = []
+    article_hrefs = []
+    article_imgs = []
+
+    all_cards = soup.find_all('article', class_='_card_6bcao_1')
+
+    for card in all_cards:
+        article_name = card.find('a', class_='_card__title_6bcao_1').text
+        article_href = 'https://stopgame.ru' + card.find('a', class_='_card__title_6bcao_1').get('href')
+        article_img = card.find('img').get('src')
+
+        article_names.append(article_name)
+        article_hrefs.append(article_href)
+        article_imgs.append(article_img)
+
+    return article_names, article_hrefs, article_imgs
