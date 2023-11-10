@@ -23,7 +23,7 @@ def about_page():
 
 @app.route('/games')
 def games_page():
-    return render_template('rating.html')
+    return render_template('games.html')
 
 @app.route('/contact')
 def contacts_page():

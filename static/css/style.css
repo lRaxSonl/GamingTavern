@@ -192,3 +192,17 @@ hr {
 .card_title:hover {
     color: #EC2227;
 }
+
+
+.game_card {
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 16px 8px;
+    row-gap: 8px;
+    text-decoration: none;
+}
+
+.main_game_card_container {
+    background-color: rgb(38, 42, 44);
+}

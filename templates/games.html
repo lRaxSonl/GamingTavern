@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="GamingTavern - это портал видоигр">
     <meta name="keywords" content="фильмы, фильмы онлайн, hd">
-    <title>Обсуждения</title>
+    <title>Игры</title>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.12.0/brython.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.12.0/brython_stdlib.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -26,28 +26,21 @@
 
                 <ul class="menu">
                     <li><b><a href="/">Главная</a></b></li>
-                    <li class="selected"><b><a href="/about">Обсуждения</a></b></li>
-                    <li><b><a href="/games">Игры</a></b></li>
+                    <li><b><a href="/about">Обсуждения</a></b></li>
+                    <li class="selected"><b><a href="/games">Игры</a></b></li>
                     <li><b><a href="/contact">Контакты</a></b></li>
                 </ul>
             </nav>
         </header>
 
         <div class="site_content">
-            <div class="sidebar_container">
-                <h1><b>Все обсуждают</b></h1>
-
-                {% for article_name, article_href, article_img in data %}
-                    <div class="card">
-                        <img src="{{ article_img }}" alt="Avatar" style="width:100%">
-                        <div class="container1">
-                            <h4>
-                                <b><a class="card_title" href="{{ article_href }}">{{ article_name }}</a></b>
-                            </h4>
-                        </div>
-                    </div>
-                {% endfor %}
-
+            <div class="main_game_card_container">
+                <img src="https://images.stopgame.ru/games/logos/18438/c192x192/oAgLpKVuSpBRqlEE8boTew/starfield-square_1.jpg" alt="Avatar" style="width:192">
+                <div class="game_card">
+                    <h4>
+                        <b><a href="#">siojv</a></b>
+                    </h4>
+                </div>
             </div>
         </div>
     </main>
