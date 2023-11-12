@@ -6,8 +6,6 @@
     <meta name="description" content="GamingTavern - это портал видоигр">
     <meta name="keywords" content="фильмы, фильмы онлайн, hd">
     <title>Главная страница</title>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.12.0/brython.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.12.0/brython_stdlib.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
 </head>
@@ -27,7 +25,7 @@
                 <ul class="menu">
                     <li class="selected"><b><a href="/">Главная</a></b></li>
                     <li><b><a href="/about">Обсуждения</a></b></li>
-                    <li><b><a href="/games">Игры</a></b></li>
+                    <li><b><a href="/blogs">Блоги</a></b></li>
                     <li><b><a href="/contact">Контакты</a></b></li>
                 </ul>
             </nav>
@@ -38,12 +36,14 @@
             <div class="p_article">
                 <h1><b>Игровые новости</b></h1>
                 <ul>
+
                     {% for name, href in data %}
                         <li>
                             <a href="{{ href }}">{{ name }}</a>
                             <hr>
                         </li>
                     {% endfor %}
+                    
                 </ul>
             </div>
     </main>

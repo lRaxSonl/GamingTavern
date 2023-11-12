@@ -6,8 +6,6 @@
     <meta name="description" content="GamingTavern - это портал видоигр">
     <meta name="keywords" content="фильмы, фильмы онлайн, hd">
     <title>Обсуждения</title>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.12.0/brython.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.12.0/brython_stdlib.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
 </head>
@@ -27,7 +25,7 @@
                 <ul class="menu">
                     <li><b><a href="/">Главная</a></b></li>
                     <li class="selected"><b><a href="/about">Обсуждения</a></b></li>
-                    <li><b><a href="/games">Игры</a></b></li>
+                    <li><b><a href="/blogs">Блоги</a></b></li>
                     <li><b><a href="/contact">Контакты</a></b></li>
                 </ul>
             </nav>
@@ -41,9 +39,7 @@
                     <div class="card">
                         <img src="{{ article_img }}" alt="Avatar" style="width:100%">
                         <div class="container1">
-                            <h4>
-                                <b><a class="card_title" href="{{ article_href }}">{{ article_name }}</a></b>
-                            </h4>
+                            <b><a class="card_title" href="{{ article_href }}">{{ article_name }}</a></b>
                         </div>
                     </div>
                 {% endfor %}

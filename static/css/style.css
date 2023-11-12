@@ -114,7 +114,7 @@ ul.menu {
 
 ul.menu li {
     float: left;
-    padding: 0 0 0 50px;
+    padding: 0 0 0 35px;
     list-style: none;
     margin: 1px 2px 0 0;
 }
@@ -193,16 +193,30 @@ hr {
     color: #EC2227;
 }
 
-
-.game_card {
-    border-radius: 8px;
+.game_card_flex {
     display: flex;
-    flex-direction: column;
-    padding: 16px 16px 8px;
-    row-gap: 8px;
-    text-decoration: none;
+    flex-direction: row;
+    padding: 10px;
+    flex-wrap: wrap;
+    /*justify-content: space-around;*/
+    grid-row-gap: 30px;
+    grid-column-gap: 10px;
 }
 
-.main_game_card_container {
-    background-color: rgb(38, 42, 44);
+.game_card_container {
+    border: solid 1px rgb(38,42,44);
+    background-color: rgb(38,42,44);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 15px;
+    width: 450px;
+}
+
+.game_card_container a {
+    color: white;
+    font-family: 'Roboto';
+}
+
+.game_card_container a:hover {
+    color: #EC2227
 }

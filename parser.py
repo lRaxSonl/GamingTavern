@@ -36,3 +36,23 @@ def get_data_about(soup):
         article_imgs.append(article_img)
 
     return article_names, article_hrefs, article_imgs
+
+
+def get_data_blogs(soup):
+    blog_names = []
+    blog_hrefs = []
+    blog_imgs = []
+
+    all_blogs = soup.find_all('article', class_='_card_6bcao_1 _card--autoheight-mobile_6bcao_474')
+
+    for blog in all_blogs:
+        
+        blog_name = blog.find('a', class_='_card__title_6bcao_1').text
+        blog_href = 'https://stopgame.ru/' + blog.find('a', class_='_card__title_6bcao_1').get('href')
+        blog_img = blog.find('img').get('src')
+        
+        blog_names.append(blog_name)
+        blog_hrefs.append(blog_href)
+        blog_imgs.append(blog_img)
+        
+    return blog_names, blog_hrefs, blog_imgs
