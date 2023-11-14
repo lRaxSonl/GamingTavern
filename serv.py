@@ -1,5 +1,5 @@
 from flask import Flask, render_template, url_for
-from parser import get_data_index, get_data_about, get_data_blogs
+from parse_data import get_data_index, get_data_about, get_data_blogs
 import requests
 from bs4 import BeautifulSoup as BS
 

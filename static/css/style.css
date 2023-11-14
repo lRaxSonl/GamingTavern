@@ -152,7 +152,7 @@ hr {
     width: 600px;
     margin-bottom: 80px;
     font-family: Roboto;
-    margin-left: 170px;
+    margin-left: 90px;
 }
 
 .sidebar_container h1 {
@@ -220,3 +220,59 @@ hr {
 .game_card_container a:hover {
     color: #EC2227
 }
+
+.lables_passreg_text a {
+    color: white
+}
+
+.lables_passreg_text a:hover {
+    color:#EC2227
+}
+
+
+.send_send_contact {
+    margin-left: 90px;
+}
+
+/* Кнопка | Взято с https://msiter.ru/articles/60-klassnykh-knopok-na-css-s-animaciey*/
+
+.btn {
+    padding: 7px 24px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
+    line-height: 1.25;
+    background: #EC2227;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    position: relative;
+    transition: background-color .6s ease;
+    overflow: hidden;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 50%;
+      left: 50%;
+      top: var(--mouse-y);
+      left: var(--mouse-x);
+      transform-style: flat;
+      transform: translate3d(-50%,-50%,0);
+      background: rgba(white,.1);
+      border-radius: 100%;
+      transition: width .3s ease, height .3s ease;
+    }
+    &:focus,
+    &:hover {
+        background: darken(#FC6E51,7%);
+    }
+    &:active {
+      &:after {
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
